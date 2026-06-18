@@ -1235,7 +1235,9 @@ boolean MorsePreferences::adjustKeyerPreference(prefPos pos) {        /// rotati
                       MorsePreferences::handleCarouselChange();
 #ifdef CONFIG_SOUND_I2S 
                   else if (pos == posLineOut) {
+#ifdef CONFIG_TLV320AIC3100_INT
                       MorseOutput::soundEventHandler();
+#endif
                   }
 #endif
             
